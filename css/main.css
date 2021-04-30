@@ -247,6 +247,7 @@ section {
   padding: .2rem 0;
   letter-spacing: .1rem;
   position: relative;
+  overflow: hidden;
 }
 
 .nav-link::before {
@@ -255,4 +256,86 @@ section {
   width: 150%;
   height: 5rem;
   background-color: #d50000;
+  left: -20%;
+  transform: rotate(-40deg) translateX(-4rem);
+  transform-origin: left bottom;
+  opacity: 0.8;
+  transition: left 0.3s;
+}
+
+.nav-link:hover::before {
+  left: 110%;
+}
+
+.page-btn {
+  position: fixed;
+  z-index: 500;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+}
+
+.img-wine {
+  width: 50px;
+  height: 70px;
+}
+
+.page-btn img {
+  width: 4rem;
+  opacity: .4;
+  cursor: pointer;
+  transition: opacity .1s;
+}
+
+.left-btn {
+  left: 4rem;
+}
+
+.left-btn img {
+  transform: rotate(-90deg);
+}
+
+.right-btn {
+  right: 4rem;
+}
+
+.right-btn img {
+  transform: rotate(90deg);
+}
+
+
+.page-btn img:hover {
+  opacity: 1;
+}
+
+.progress-wrapper {
+  z-index: 700;
+  position: fixed;
+  bottom: 2rem;
+  left: 3rem;
+}
+
+.progress h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: #fff;
+
+}
+
+.circle {
+  width: 1rem;
+  height: 1rem;
+  border:  0.1rem solid #fff;
+  border-radius: 50%;
+  margin: 0 3rem;
+
+}
+.circle-wrapper {
+  display: flex;
+}
+
+.progress {
+  margin: 1rem 0;
+  text-align: center;
 }
