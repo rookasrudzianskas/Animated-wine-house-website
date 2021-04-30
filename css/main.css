@@ -220,3 +220,39 @@ section {
   color: #eee;
   letter-spacing: .2rem;
 }
+
+.navbar {
+  position: fixed;
+  z-index: 400;
+  width: 100%;
+  top: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-link {
+  font-size: 1.5rem;
+  color: #fff;
+  width: 15rem;
+  margin: 0 3rem;
+  text-transform: uppercase;
+  border: .1px solid #fff;
+  text-align: center;
+  padding: .2rem 0;
+  letter-spacing: .1rem;
+  position: relative;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  width: 150%;
+  height: 5rem;
+  background-color: #d50000;
+}
