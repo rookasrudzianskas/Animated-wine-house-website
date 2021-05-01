@@ -6,7 +6,30 @@ const progress = document.querySelector('.progressh2');
 
 const circles = document.querySelectorAll('.circle');
 
+const pageController = () => {
+  if(counter1 === 5) {
+    Array.from(sections).forEach((section) => {
+      section.style.left = '0'
+    })
+    counter1 = 0;
+    counter2 = 1;
+    progressCounter();
+    return;
+  }
 
+  if(counter1 === -1) {
+    Array.from(sections).forEach(section => {
+      if(section.classList[0] === 'section-5') {
+        return;
+      }
+      section.style.left = "-100vw";
+    })
+    counter1 = 4;
+    counter2 = 5;
+    progressCounter();
+  }
+progressCounter();
+}
 
 const progressCounter = () => {
   progress.textContent = `${counter2}/${sections.length}`;
